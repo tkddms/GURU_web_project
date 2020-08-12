@@ -1,0 +1,22 @@
+> 디자인
+    - font 지정해서 알려주기
+    - 패비콘 -> 탭 보면 조그맣게 그림 나와있는거야
+    - 기타 디자인에 필요한 이미지 등
+       (만약 ai 파일이나 psd 파일 있으면 png 파일이랑 함께 원본파일 다 올려줘!)
+
+> 프론트(html, css)
+    - HTML/CSS/JS - 프론트 만들기
+       (부트스트랩 참고하는것도 좋은 방법!)
+
+> 백(장고)
+    - 로그인 / 회원가입
+
+> 기타
+    - 소개글 (프로필/줄글 작성)
+    - 업무문의 줄글
+    - 연락처 표 작성
+
+* 참고 사이트
+- https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=E1BEE7 - 색 조합
+- https://material.io/resources/icons/?style=baseline - 아이콘
+- https://fonts.google.com/ - 구글 웹폰트 모아둔 것
