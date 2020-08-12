@@ -3,9 +3,18 @@ from .models import Post
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+def main(request):
+    return render(request, 'blog/post_main.html')
+
+def service(request):
+    return render(request, 'blog/service.html')
+
+def contact(request):
+    return render(request, 'blog/contact.html')
+
 class PostList(ListView):
     model = Post
-
+    template_name = "post_list.html"
     def get_queryset(self):
         return Post.objects.order_by('-created')
 
@@ -30,4 +39,4 @@ class PostCreate(LoginRequiredMixin, CreateView):
             form.instance.author = current_user
             return super(type(self),self).form_valid(form)
         else:
-            return redirect('/blog/')
+            return redirect('/')
