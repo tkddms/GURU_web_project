@@ -9,6 +9,8 @@ class Post(models.Model):
 
     created = models.DateTimeField()
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    STATUS_CHOICES = ((1, 'manager'),(2, 'guest'),)
+    status = models.IntegerField(choices=STATUS_CHOICES, default=2)
 
     def __str__(self):
         return '{} :: {}'.format(self.title, self.author)
