@@ -9,8 +9,7 @@ class Post(models.Model):
 
     created = models.DateTimeField()
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    STATUS_CHOICES = ((1, 'manager'),(2, 'guest'),)
-    status = models.IntegerField(choices=STATUS_CHOICES, default=2)
+    is_admin = models.BooleanField('관리자 권한', default=False)
 
     def __str__(self):
         return '{} :: {}'.format(self.title, self.author)
