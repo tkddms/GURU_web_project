@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* reset */
+html,body {
+	height: 100%; width: 100%;
+}
+body,p,h1,h2,h3,select,td,tr,table{
+	padding: 0;
+	margin: 0;
+	font-family: 'Malgun Gothic', sans-serif;
+	font-size: 12px;
+}
+img, fieldset{
+	border: 0;
+}
+ul,ol{
+	list-style: none;
+}
+em,address{
+	font-style: normal;
+}
+a{
+	text-decoration: none;
+}
+a:hover,a:active,a:focus{
+	text-decoration: underline;
+}
+
+/* style */
+.wrap{
+	width: 960px;
+	margin: 0 auto;
+}
+
+footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding-bottom: 8px;
+    color: #929292;
+	text-align: center;
+	font-size: 1em;
+}
