@@ -32,6 +32,59 @@ a:hover,a:active,a:focus{
 	margin: 0 auto;
 }
 
+.navbar .logo{
+	display: inline-block;
+	text-align: center;
+}
+
+.navbar .login-screen, .navbar .guest-screen, .navbar .login-screen .user-login, .navbar .login-screen .navbar-logout {
+	display: inline-block;
+}
+
+.navbar .logo-center{
+	text-align: center;
+	color: transparent;	
+}
+
+/* .nav-menu{
+	position: relative;
+	width: 100%;
+}
+.nav-menu li > a :hover {
+	background-color: red;
+}
+
+.nav-menu li.m1 > a, .nav-menu li.m2 > a, .nav-menu li.m3 > a, .nav-menu li.m4 > a {
+	display: block;
+	float: left;
+	height: 35px;
+	padding: 0 30px;
+	border: 1px solid #aaa;
+	background-color: #eee;
+	line-height: 35px;
+	color: #666666;
+	font-size: 13px;
+	text-decoration: none;
+}
+.nav-menu li.m1.active > a, .nav-menu li.m2.active > a, .nav-menu li.m3.active > a, .nav-menu li.m4.active > a{
+	position: relative;
+	z-index: 1;
+	border-bottom-color: #ffffff;
+	background-color: #ffffff;
+	color: #222222;
+}
+
+.container{
+	position: relative;
+	display: block;
+} */
+
+.navbar-brand-center-logo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 footer {
 	position: absolute;
 	left: 0;
@@ -40,5 +93,4 @@ footer {
 	padding-bottom: 8px;
     color: #929292;
 	text-align: center;
-	font-size: 1em;
 }
