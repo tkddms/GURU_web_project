@@ -1,23 +1,25 @@
 {% extends 'blog/base.html' %}
+
 {% block content %}
 <h1>Info Page</h1>
 {% if object_list.exists %}
 {% for p in object_list %}
-<div class="card mb-4">
-    {% if p.head_image %}
-    <img class="card-img-top" src="{{p.head_image.url}}" alt="Card image cap">
-    {% else %}
-    <img src="https://picsum.photos/750/300?random" alt="Card image cap" class="card-img-top">
-    {% endif %}
-    <div class="card-body">
-        <h2 class="card-title">{{p.title}}</h2>
-        <p class="card-text">{{p.content | truncatewords:50}}</p>
-        <a href="{{ p.get_absolute_url }}" class="btn btn-primary" id="read-more-post-{{ p.pk }}">Read More &rarr;</a>
-    </div>
-    <div class="card-footer text-muted">
-        Posted on {{p.created}} by {{p.author}}
-        <a href="#">Start Bootstrap</a>
-    </div>
+<div class="card">
+    <a href="{{ p.get_absolute_url }}">
+        {% if p.head_image %}
+        <img class="card-img-top" src="{{p.head_image.url}}" alt="Card image cap" style="width:100%">
+        {% else %}
+        <img src="https://picsum.photos/700/600?random" alt="Card image cap" class="card-img-top">
+        {% endif %}
+        <div class="card-content">
+            <h4><b>{{p.title}}</b></h4>
+            <p>{{p.content | truncatewords:50}}</p>
+            <hr>
+            <div class="card-footer text-muted">
+                Posted on {{p.created}} by {{p.author}}
+            </div>
+        </div>
+    </a>
 </div>
 {% endfor %}
 {% else %}

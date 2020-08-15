@@ -2,65 +2,71 @@
 {% load static %}
 <html lang="ko">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'bootstrap/custom.min.css' %}">
+    <link rel="stylesheet" href="{% static '_assets/css/style_base.css' %}">
+    <link rel="stylesheet" href="{% static '_assets/css/style_info.css' %}">
+    <title>Base</title>
+    {% endblock %}
 </head>
-
 <body>
 {% load socialaccount %}
-
-<!-- Navigation -->
-<nav class="navbar">
+<!-- nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     {% block nav %}
-    <div class="nav-container">
-        <a href="{% url 'main' %}" class="logo"><h1>탐정사무소</h1></a>
-        {% if user.is_authenticated %}
-        <div class="already-login">{{ user }}님 안녕하세요.</div>
-        <a role="button" href="{% url 'account_logout' %}" class="navbar-login">Log out</a>
-        {% else %}
-        <a role="button" href="{% provider_login_url 'google' %}" class="navbar-login">Log in with Google</a>
-        {% endif %}
+    <a class="navbar-brand" href="#"><img src="./img/leftAd.png" alt="로고" width="100px" height="50px" ></a>
+    <a class="navbar-brand-center-logo" href="{% url 'main' %}"><img src="./img/logo_ver1.png" alt="중간로고" width="100px" height="50px" class="logo-center"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse show" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'main' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'info' %}">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'service' %}">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">About</a>
+            </li>
+            <li class="nav-item login-item">
+                {% if user.is_authenticated %}
+                <div class="already-login">{{ user }}님 안녕하세요.</div>
+                <a role="button" href="{% url 'account_logout' %}" class="navbar-login">Log out</a>
+                {% else %}
+                <a class="nav-link" href="{% provider_login_url 'google' %}">
+                    <img src="none" alt="Sign in with Google" id="login-image"></a>
+                {% endif %}
+            </li>
+        </ul>
     </div>
     {% endblock %}
 </nav>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-    {% block subnav %}
-    <div class="nav-container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'main' %}">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'info' %}">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'service' %}">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-                </li>
-            </ul>
-        </div>
+<!-- //navbar -->
+
+<div class="wrap container">
+    <div class="jumbotron">
+        {% block content%}
+        {% endblock %}
     </div>
-    {% endblock %}
-</nav>
-<div class="container">
-    {% block content%}
-    {% endblock %}
 </div>
-<footer>
-    &COPY; 2020 HTML-7 all rights reserved
-</footer>
-</body>
+<footer>&COPY; 2020 HTML-7 all rights reserved</footer>
 
+<script src="{% static 'bootstrap/jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap/popper.min.js' %}"></script>
+<script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
+<script src="{% static 'bootstrap/custom.js' %}"></script>
+<!--<script src="./js_base.js"></script>-->
+
+</body>
 </html>
