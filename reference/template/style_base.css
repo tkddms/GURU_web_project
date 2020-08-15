@@ -28,10 +28,13 @@ a:hover,a:active,a:focus{
 
 /* style */
 .wrap{
-	
+	min-height: 80%;
+	display: block;
 	margin: 0 auto;
 	padding-top: 2em;
+	text-align: center;
 }
+
 
 /* .navbar .logo{
 	display: inline-block;
@@ -87,10 +90,11 @@ a:hover,a:active,a:focus{
 }
 
 footer {
-	position: absolute;
+	position: relative;
 	left: 0;
 	bottom: 0;
 	width: 100%;
+	padding-top: 20px;
 	padding-bottom: 8px;
     color: #929292;
 	text-align: center;
