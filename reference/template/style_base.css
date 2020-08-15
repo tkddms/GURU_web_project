@@ -35,21 +35,6 @@ a:hover,a:active,a:focus{
 	text-align: center;
 }
 
-
-/* .navbar .logo{
-	display: inline-block;
-	text-align: center;
-}
-
-.navbar .login-screen, .navbar .guest-screen, .navbar .login-screen .user-login, .navbar .login-screen .navbar-logout {
-	display: inline-block;
-}
-
-.navbar .logo-center{
-	text-align: center;
-	color: transparent;	
-} */
-
 @media (min-width: 992px){
 	.navbar-brand {
 		display: none;
@@ -63,30 +48,68 @@ a:hover,a:active,a:focus{
 	margin-right: auto;
 }
 
+/* 크롬이새끼야너는뭐가문젠데 왜 네가 되면 다른브라우저는 안되고 네가 안되면 다른브라우저는 다 되냐고 */
 
-@media (min-width: 992px){
-	.login-item{
-		position: absolute;
-		right: 10px;
-		top: 5px;
+/* Chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@media (min-width: 992px){
+		.login-item{
+			position: absolute;
+			right: 10px;
+			top: 1%;
+		}
 	}
 	#login-image{
-		content: url('./img/btn_google_signin_light_normal_web@2x.png');
-		height: 45px;
+	content: url('./img/btn_google_signin_light_normal_web@2x.png');
+	height: 45px;
 	}
 	#login-image:hover{
-		animation-delay: 1s;
-		content: url('./img/btn_google_signin_light_focus_web@2x.png');
+	animation-delay: 1s;
+	content: url('./img/btn_google_signin_light_focus_web@2x.png');
+	height: 45px;
 	}
 	#login-image:active{
-		animation-delay: 1s;
-		content: url('./img/btn_google_signin_light_pressed_web@2x.png');
+	animation-delay: 1s;
+	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
+	height: 45px;
 	}
 }
 
-#login-image:active{
+img#login-image{
+	content: url('./img/btn_google_signin_light_normal_web@2x.png');
+	height: 45px;
+}
+img#login-image:hover{
 	animation-delay: 1s;
-	color: #ff9494;
+	content: url('./img/btn_google_signin_light_focus_web@2x.png');
+	height: 45px;
+}
+img#login-image:active{
+	animation-delay: 1s;
+	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
+	height: 45px;
+}
+
+@media (min-width: 992px){
+	.login-item{
+	position: absolute;
+	right: 10px;
+	top: 1%;
+	}
+	img#login-image{
+	content: url('./img/btn_google_signin_light_normal_web@2x.png');
+	height: 45px;
+	}
+	img#login-image:hover{
+	animation-delay: 1s;
+	content: url('./img/btn_google_signin_light_focus_web@2x.png');
+	height: 45px;
+	}
+	img#login-image:active{
+	animation-delay: 1s;
+	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
+	height: 45px;
+	}
 }
 
 footer {
