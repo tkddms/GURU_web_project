@@ -28,11 +28,12 @@ a:hover,a:active,a:focus{
 
 /* style */
 .wrap{
-	width: 960px;
+	
 	margin: 0 auto;
+	padding-top: 2em;
 }
 
-.navbar .logo{
+/* .navbar .logo{
 	display: inline-block;
 	text-align: center;
 }
@@ -44,45 +45,45 @@ a:hover,a:active,a:focus{
 .navbar .logo-center{
 	text-align: center;
 	color: transparent;	
-}
-
-/* .nav-menu{
-	position: relative;
-	width: 100%;
-}
-.nav-menu li > a :hover {
-	background-color: red;
-}
-
-.nav-menu li.m1 > a, .nav-menu li.m2 > a, .nav-menu li.m3 > a, .nav-menu li.m4 > a {
-	display: block;
-	float: left;
-	height: 35px;
-	padding: 0 30px;
-	border: 1px solid #aaa;
-	background-color: #eee;
-	line-height: 35px;
-	color: #666666;
-	font-size: 13px;
-	text-decoration: none;
-}
-.nav-menu li.m1.active > a, .nav-menu li.m2.active > a, .nav-menu li.m3.active > a, .nav-menu li.m4.active > a{
-	position: relative;
-	z-index: 1;
-	border-bottom-color: #ffffff;
-	background-color: #ffffff;
-	color: #222222;
-}
-
-.container{
-	position: relative;
-	display: block;
 } */
 
+@media (min-width: 992px){
+	.navbar-brand {
+		display: none;
+	}
+}
+
 .navbar-brand-center-logo{
+	position: relative;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+
+@media (min-width: 992px){
+	.login-item{
+		position: absolute;
+		right: 10px;
+		top: 5px;
+	}
+	#login-image{
+		content: url('./img/btn_google_signin_light_normal_web@2x.png');
+		height: 45px;
+	}
+	#login-image:hover{
+		animation-delay: 1s;
+		content: url('./img/btn_google_signin_light_focus_web@2x.png');
+	}
+	#login-image:active{
+		animation-delay: 1s;
+		content: url('./img/btn_google_signin_light_pressed_web@2x.png');
+	}
+}
+
+#login-image:active{
+	animation-delay: 1s;
+	color: #ff9494;
 }
 
 footer {
