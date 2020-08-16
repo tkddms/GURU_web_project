@@ -40,12 +40,23 @@
             </li>
             <li class="nav-item login-item">
                 {% if user.is_authenticated %}
-                <div class="already-login">{{ user }}님 안녕하세요.</div>
-                <a role="button" href="{% url 'account_logout' %}" class="navbar-login">Log out</a>
-                {% else %}
-                <a class="nav-link" href="{% provider_login_url 'google' %}">
-                    <img src="none" alt="Sign in with Google" id="login-image"></a>
-                {% endif %}
+                <ul class="nav nav-pills already-login">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ user }}님 안녕하세요.</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a>
+                        </div>
+                    </li>
+                </ul>
+            <li class="nav-item logout-small-nav">
+                    <a class="nav-link logout-small-nav" href="{% url 'account_logout' %}">Log out</a>
+            </li>
+            {% else %}
+            <a class="nav-link" href="{% provider_login_url 'google' %}">
+                <img src="none" alt="Sign in with Google" id="login-image"></a>
+            {% endif %}
             </li>
         </ul>
     </div>

@@ -48,6 +48,10 @@ a:hover,a:active,a:focus{
 	margin-right: auto;
 }
 
+.logout-small-nav{
+	display: none;
+}
+
 /* 크롬이새끼야너는뭐가문젠데 왜 네가 되면 다른브라우저는 안되고 네가 안되면 다른브라우저는 다 되냐고 */
 
 /* Chrome */
@@ -96,6 +100,11 @@ img#login-image:active{
 	right: 10px;
 	top: 1%;
 	}
+
+	.logout-small-nav{
+		display: inline-block;
+	}
+
 	img#login-image{
 	content: url('./img/btn_google_signin_light_normal_web@2x.png');
 	height: 45px;

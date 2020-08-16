@@ -36,8 +36,14 @@ a:hover,a:active,a:focus{
 }
 
 .already-login{
-	display: none;
+display:none;
+}
 
+@media (min-width: 992px){
+    .logout-small-nav{
+	display:none;
+	visibility:hidden;
+	}
 }
 
 @media (min-width: 992px){
@@ -53,6 +59,9 @@ a:hover,a:active,a:focus{
 		position: absolute;
 		right: 10px;
 		top: 1%;
+	}
+	.logout-small-nav{
+	display:block;
 	}
 }
 
@@ -73,6 +82,9 @@ a:hover,a:active,a:focus{
 			right: 10px;
 			top: 1%;
 		}
+		.logout-small-nav{
+	        display:block;
+	    }
 	}
 	#login-image{
 	content: url('./img/btn_google_signin_light_normal_web@2x.png');
@@ -90,26 +102,14 @@ a:hover,a:active,a:focus{
 	}
 }
 
-img#login-image{
-	content: url('./img/btn_google_signin_light_normal_web@2x.png');
-	height: 45px;
-}
-img#login-image:hover{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_focus_web@2x.png');
-	height: 45px;
-}
-img#login-image:active{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
-	height: 45px;
-}
-
 @media (min-width: 992px){
 	.login-item{
 	position: absolute;
 	right: 10px;
 	top: 1%;
+	}
+    .logout-small-nav{
+	display:block;
 	}
 	img#login-image{
 	content: url('./img/btn_google_signin_light_normal_web@2x.png');
