@@ -2,10 +2,6 @@
 
 {% block content %}
 <h2>Post Detail Page</h2>
-{% for p in object_list %}
-<h1>
-This is a post_detail
-</h1>
-<div class="container">{{ p.content }}</div>
-{% endfor %}
+<h3>{{ object.title }}</h3>
+<div class="container">{{ object.content }}</div>
 {% endblock %}

@@ -3,5 +3,12 @@
 {% block title %}{{ object.title }} - LostChild{% endblock %}
 
 {% block content %}
-{{form}}
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <button type="submit">SUBMIT</button>
+</form>
+{{ form.media }}
 {% endblock %}
