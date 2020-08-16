@@ -6,6 +6,7 @@
 {% for p in object_list %}
 <div class="card">
     <a href="{{ p.get_absolute_url }}">
+        <div class="card-footer" id="post-card-{{p.pk}}"></div>
         {% if p.head_image %}
         <img class="card-img-top" src="{{p.head_image.url}}" alt="Card image cap" style="width:100%">
         {% else %}
@@ -15,6 +16,9 @@
             <h4><b>{{p.title}}</b></h4>
             <p>{{p.content | truncatewords:50}}</p>
             <hr>
+            <p>{% for tag in p.tags.all %}
+                    #{{ tag }}
+                {% endfor %}</p>
             <div class="card-footer text-muted">
                 Posted on {{p.created}} by {{p.author}}
             </div>
