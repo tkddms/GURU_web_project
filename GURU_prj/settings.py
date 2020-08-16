@@ -138,3 +138,6 @@ ACCOUNT_EMAIL_REQUIRED = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/blog/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'_media')
+MEDIA_URL = '/media/'
