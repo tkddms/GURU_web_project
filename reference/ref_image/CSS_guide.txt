@@ -1,4 +1,4 @@
-Main
+Main page
 // PSD/PDF 파일의 붉은색 글씨는 주석임!!
 // 배경색: #bfbfbf, 모든 글씨: #3c3837
 
@@ -35,3 +35,8 @@ hr { border-bottom: 3px double #3c3837 }
 
 #footer
 페이지 마지막에 ⓒGURU1 HTML-7 project 넣어주세요!
+
+Logout page
+탐정사무소 로고는 reference/src/log_out/logo.png 사용
+텍스트는 html로 처리
+'메인 페이지로'는 png 이미지로 처리, 버튼은 reference/src/log_out/to_main.png 사용
