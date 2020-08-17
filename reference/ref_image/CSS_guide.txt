@@ -26,13 +26,6 @@ hr { border-bottom: 3px double #3c3837 }
 	<li>연락처</li>
 </ul>
 
-#container
-서체
-<h1> DX마카롱, 40pt, #3c3837
-<h2>KoPubWorld바탕_Pro, 30pt, Bold, #3c3837
-<h3>KoPubWorld돋움_Pro, 25pt, Bold, #3c3837
-<h4>KoPubWorld돋움_Pro, 20pt, Medium, #3c3837
-
 #footer
 페이지 마지막에 ⓒGURU1 HTML-7 project 넣어주세요!
 
