@@ -81,25 +81,29 @@ a:hover,a:active,a:focus{
 }
 
 /* style */
-/*.wrap{
+.wrap{
 	min-height: 80%;
 	display: block;
 	margin: 0 auto;
 	padding-top: 2em;
 	text-align: center;
+}
+
+/*@media (min-width: 992px){
+	.navbar-brand {
+		display: inline;
+	}
 }*/
 
-@media (min-width: 992px){
-	.navbar-brand {
-		display: none;
+.leftAd {
+		display: inline;
 	}
-}
 
 .navbar-brand-center-logo{
 	position: relative;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .logout-small-nav{
@@ -111,6 +115,14 @@ hr {
 	border-bottom: 3px double #3c3837;
 }
 
+ul {
+	text-align: center;
+}
+
+li .nav-item { 
+	padding: 0px 20px
+}
+
 /* 크롬이새끼야너는뭐가문젠데 왜 네가 되면 다른브라우저는 안되고 네가 안되면 다른브라우저는 다 되냐고 */
 
 /* Chrome */
@@ -119,7 +131,7 @@ hr {
 		.login-item{
 			position: absolute;
 			right: 10px;
-			top: 1%;
+			top: 20px;
 		}
 	}
 	#login-image{

@@ -4525,7 +4525,7 @@ input[type="button"].btn-block {
 }
 
 .nav-tabs .nav-item {
-  margin-bottom: -1px;
+  margin-bottom: 3px;
 }
 
 .nav-tabs .nav-link {
@@ -4625,7 +4625,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-brand {
-  display: inline-block;
+  display: inline;
   padding-top: 0.3006875rem;
   padding-bottom: 0.3006875rem;
   margin-right: 1rem;
