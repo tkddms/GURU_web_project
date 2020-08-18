@@ -31,13 +31,13 @@ class PostDetail(DetailView):
 class PostUpdate(UpdateView):
     model = Post
     fields = [
-        'title', 'head_image', 'content'
+        'title', 'head_image', 'missing_place', 'missing_date', 'missing_age', 'recent_age' ,'content', 'tags'
     ]
 
 class PostCreate(LoginRequiredMixin, CreateView):
     model = Post
     fields = [
-        'title', 'head_image', 'content'
+        'title', 'head_image', 'missing_place', 'missing_date', 'missing_age', 'recent_age' ,'content', 'tags'
     ]
 
     def form_valid(self, form):

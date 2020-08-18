@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from markdownx.models import MarkdownxField
 from markdownx.utils import markdown
+from django.utils import timezone
 
 class Tag(models.Model):
     name = models.CharField(max_length=40, unique=True)
@@ -17,7 +18,10 @@ class Post(models.Model):
 
     created = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    is_admin = models.BooleanField('관리자 권한', default=False)
+    missing_place = models.CharField(max_length=50, blank=True)
+    missing_date = models.DateTimeField(default=timezone.now, null=True, blank=True)
+    missing_age = models.IntegerField(null=True, blank=True)
+    recent_age = models.IntegerField(null=True, blank=True)
 
     tags = models.ManyToManyField(Tag, blank=True)
 

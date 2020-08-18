@@ -8,7 +8,9 @@
 {% endfor %}
 <h2>Post Detail Page</h2>
 <h3>{{ object.title }}</h3>
-<div class="container">{{ object.get_markdown_content | safe }}
+<div class="container">
+    <img src="{{ object.head_image.url }}" alt="{{object.head_image}}">
+    {{ object.get_markdown_content | safe }}
 
     <!-- Comments Form -->
     <div class="card my-4">
