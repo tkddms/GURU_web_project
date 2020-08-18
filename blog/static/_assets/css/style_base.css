@@ -2,13 +2,67 @@
 
 /* reset */
 html,body {
-	height: 100%; width: 100%;
+	height: 100%; width: 100%; background: #bfbfbf; text-align: center;
 }
+/*폰트 등록*/
+@font-face {
+font-family:"KoPub돋움Bold";
+src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/dotum/KoPubWorld Dotum Bold.ttf") format("truetype");
+}
+@font-face {
+font-family:"KoPub돋움Normal";
+src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/dotum/KoPubWorld Dotum Medium.ttf") format("truetype");
+}
+@font-face {
+font-family:"KoPub바탕Bold";
+src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/batang/KoPubWorld Batang Bold.ttf") format("truetype");
+}
+@font-face { 
+font-family:"DXMacaron";  
+src:url("GURU_web_project/reference/src/fonts/DXMacaron-KSCpc-EUC-H.ttf") format("truetype");
+}
+
 body,p,h1,h2,h3,select,td,tr,table{
 	padding: 0;
 	margin: 0;
 	font-family: 'Malgun Gothic', sans-serif;
 	font-size: 12px;
+	color: #3c3837;
+}
+h1 {
+	font-family: 'DXMacaron';
+	font-size: 40px;
+	color: #3c3837;
+}
+h2 {
+	font-family: 'KoPub바탕Bold';
+	font-size: 30px;
+	font-weight: bold;
+	color: #3c3837;
+}
+h3 {
+	font-family: 'KoPub돋움Bold','Malgun Gothic', sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	color: #3c3837;
+}
+h4 {
+	font-family: 'KoPub돋움Bold','Malgun Gothic', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #3c3837;
+}
+p {
+	font-family: 'KoPub돋움Normal','Malgun Gothic', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: #3c3837;
+}
+ul {
+	font-family: 'KoPub바탕Bold','Malgun Gothic', serif;
+	font-size: 25px;
+	font-weight: bold;
+	color: #3c3837;
 }
 img, fieldset{
 	border: 0;
@@ -35,41 +89,38 @@ a:hover,a:active,a:focus{
 	text-align: center;
 }
 
-.already-login{
-display:none;
-}
-
-@media (min-width: 992px){
-    .logout-small-nav{
-	display:none;
-	visibility:hidden;
-	}
-}
-
-@media (min-width: 992px){
+/*@media (min-width: 992px){
 	.navbar-brand {
-		display: none;
+		display: inline;
 	}
-	.already-login{
-		display: inline-block;
-		top: 1%;
-		right: 5px;
+}*/
+
+.leftAd {
+		display: inline;
 	}
-	.login-item{
-		position: absolute;
-		right: 10px;
-		top: 1%;
-	}
-	.logout-small-nav{
-	display:block;
-	}
-}
 
 .navbar-brand-center-logo{
 	position: relative;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.logout-small-nav{
+	display: none;
+}
+
+hr {
+	border-top: 3px double #3c3837;
+	border-bottom: 3px double #3c3837;
+}
+
+ul {
+	text-align: center;
+}
+
+li .nav-item { 
+	padding: 0px 20px
 }
 
 /* 크롬이새끼야너는뭐가문젠데 왜 네가 되면 다른브라우저는 안되고 네가 안되면 다른브라우저는 다 되냐고 */
@@ -80,17 +131,15 @@ display:none;
 		.login-item{
 			position: absolute;
 			right: 10px;
-			top: 1%;
+			top: 20px;
 		}
-		.logout-small-nav{
-	        display:block;
-	    }
 	}
 	#login-image{
-	content: url('./img/btn_google_signin_light_normal_web@2x.png');
-	height: 45px;
+	content: url('/GURU_web_project/blog/static/_assets/src/google_login.png');
+	height: 110px;
+	text-align: center;
 	}
-	#login-image:hover{
+	/*#login-image:hover{
 	animation-delay: 1s;
 	content: url('./img/btn_google_signin_light_focus_web@2x.png');
 	height: 45px;
@@ -99,8 +148,24 @@ display:none;
 	animation-delay: 1s;
 	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
 	height: 45px;
-	}
+	}*/
 }
+
+img#login-image{
+	content: url('/GURU_web_project/blog/static/_assets/src/google_login.png');
+	height: 45px;
+	text-align: center;
+}
+/*img#login-image:hover{
+	animation-delay: 1s;
+	content: url('./img/btn_google_signin_light_focus_web@2x.png');
+	height: 45px;
+}
+img#login-image:active{
+	animation-delay: 1s;
+	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
+	height: 45px;
+}*/
 
 @media (min-width: 992px){
 	.login-item{
@@ -108,14 +173,16 @@ display:none;
 	right: 10px;
 	top: 1%;
 	}
-    .logout-small-nav{
-	display:block;
+
+	.logout-small-nav{
+		display: inline-block;
 	}
+
 	img#login-image{
-	content: url('./img/btn_google_signin_light_normal_web@2x.png');
-	height: 45px;
+	content: url('/GURU_web_project/blog/static/_assets/src/google_login.png');
+	height: 110px;
 	}
-	img#login-image:hover{
+/*	img#login-image:hover{
 	animation-delay: 1s;
 	content: url('./img/btn_google_signin_light_focus_web@2x.png');
 	height: 45px;
@@ -124,7 +191,7 @@ display:none;
 	animation-delay: 1s;
 	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
 	height: 45px;
-	}
+	}*/
 }
 
 footer {

@@ -14,56 +14,59 @@
     {% endblock %}
 </head>
 <body>
-{% load socialaccount %}
-<!-- nav bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    {% block nav %}
-    <a class="navbar-brand" href="#"><img src="./img/leftAd.png" alt="로고" width="100px" height="50px" ></a>
-    <a class="navbar-brand-center-logo" href="{% url 'main' %}"><img src="./img/logo_ver1.png" alt="중간로고" width="100px" height="50px" class="logo-center"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="navbar-collapse collapse show" id="navbarColor01">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'main' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'info' %}">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'service' %}">Pricing</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'contact' %}">About</a>
-            </li>
-            <li class="nav-item login-item">
-                {% if user.is_authenticated %}
-                <ul class="nav nav-pills already-login">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ user }}님 안녕하세요.</a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="{{ object.get_update_url }}">Edit</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a>
-                        </div>
-                    </li>
-                </ul>
-            <li class="nav-item logout-small-nav">
-                    <a class="nav-link logout-small-nav" href="{% url 'account_logout' %}">Log out</a>
-            </li>
-            {% else %}
-            <a class="nav-link" href="{% provider_login_url 'google' %}">
-                <img src="none" alt="Sign in with Google" id="login-image"></a>
-            {% endif %}
-            </li>
-        </ul>
-    </div>
+    {% load socialaccount %}
+    {% block mainnav %}
+    <img class="leftAd" src="{% static '_assets/src/leftAd.png' %}" alt="실종문의는 구루슈니즈 광고" width="322px" height="110px" align="left">
+    <a class="navbar-brand-center-logo" href="{% url 'main' %}">
+        <img src="{% static '_assets/src/logo.png' %}" alt="구루슈니즈 탐정사무소 로고" width="386px" height="126px" class="logo-center">
+    </a>
+    {% if user.is_authenticated %}
+    <ul class="nav nav-pills already-login">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ user }}님 안녕하세요.</a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="{{ object.get_update_url }}">Edit</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a>
+            </div>
+        </li>
+    </ul>
+    <li class="nav-item logout-small-nav">
+        <a class="nav-link logout-small-nav" href="{% url 'account_logout' %}">Log out</a>
+    </li>
+    {% else %}
+    <a class="login-item nav-link" href="{% provider_login_url 'google' %}">
+        <img src="none" alt="Sign in with Google" id="login-image">
+    </a>
+    {% endif %}
     {% endblock %}
-</nav>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <!-- 메뉴 버튼인데 디자인한 대로 가면 안 넣어도 될 것 같아서 주석처리했어! -->
 
-<!-- //navbar -->
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        {% block nav %}
+        <div class="navbar-collapse collapse show" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="{% url 'main' %}">소개</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'info' %}">실종정보</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'service' %}">업무문의</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">연락처</a>
+                </li>
+            </ul>
+        </div>
+        {% endblock %}
+    </nav>
+    <!-- //navbar -->
 
 <div class="wrap container">
     <div class="jumbotron">
@@ -77,7 +80,6 @@
 <script src="{% static 'bootstrap/popper.min.js' %}"></script>
 <script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
 <script src="{% static 'bootstrap/custom.js' %}"></script>
-<!--<script src="./js_base.js"></script>-->
 
 </body>
 </html>
