@@ -4593,7 +4593,7 @@ input[type="button"].btn-block {
   display: block;
 }
 
-.navbar {
+. {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10788,7 +10788,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .navbar {
-  font-size: 0.930125rem;
+  font-size: 25pt;
 }
 
 .navbar.bg-dark {
@@ -10796,8 +10796,9 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .navbar.bg-light {
-  background-color: #fff !important;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #bfbfbf !important;
+  border-top: 3px double rgba(60, 56, 55, 1);
+  border-bottom: 3px double rgba(60, 56, 55, 1);
 }
 
 .navbar.bg-light.navbar-fixed-top {
