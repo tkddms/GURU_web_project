@@ -1,3 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		@font-face {
+		font-family:"KoPub돋움Normal";
+		src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/dotum/KoPubWorld Dotum Medium.ttf") format("truetype");
+		}
+		body { 
+			background-color: #bfbfbf;
+			font-family: 'KoPub돋움Normal','Malgun Gothic', sans-serif;
+			font-size: 25pt;
+			color: #3c3837;
+			position: absolute;
+			top: 50%; left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+		.logo {
+			margin: 20px;
+		}
+	</style>
+</head>
+<body>
 {% extends "account/base.html" %}
 {% load i18n %}
 
@@ -6,10 +32,16 @@
 <form method="post" action="{% url 'account_logout' %}">
   {% csrf_token %}
   {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/><br>
+  <!-- 그냥 디자인 상 보기 좋으라고 해둔것! 나중에 주석처리해서 없애주세요! -->
+  <img class="logo" src="GURU_web_project/reference/src/log_out/logo.png" alt="구루슈니즈 탐정사무소 로고">
+  <br>
   {% endif %}
-  <button type="submit">{% trans 'GoodBye!' %}</button>
+  <br>
+  <p class="text">정상적으로 로그아웃되었습니다.<br>이용해주셔서 감사합니다.</p>
+  <a href="GURU_web_project/reference/template/_base.html"><button type="submit">{% trans 'GoodBye!' %}<img src="GURU_web_project/reference/src/log_out/to_main.png" alt="메인 페이지로 버튼"></button></a>
 </form>
 
-
 {% endblock %}
+</body>
+</html>

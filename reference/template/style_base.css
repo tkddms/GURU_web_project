@@ -2,7 +2,7 @@
 
 /* reset */
 html,body {
-	height: 100%; width: 100%; background: #bfbfbf;
+	height: 100%; width: 100%; background: #bfbfbf; text-align: center;
 }
 /*폰트 등록*/
 @font-face {
@@ -41,25 +41,25 @@ h2 {
 	color: #3c3837;
 }
 h3 {
-	font-family: 'KoPub돋움','Malgun Gothic', sans-serif;
+	font-family: 'KoPub돋움Bold','Malgun Gothic', sans-serif;
 	font-size: 25px;
 	font-weight: bold;
 	color: #3c3837;
 }
 h4 {
-	font-family: 'KoPub돋움','Malgun Gothic', sans-serif;
+	font-family: 'KoPub돋움Bold','Malgun Gothic', sans-serif;
 	font-size: 20px;
 	font-weight: bold;
 	color: #3c3837;
 }
 p {
-	font-family: 'KoPub돋움','Malgun Gothic', sans-serif;
+	font-family: 'KoPub돋움Normal','Malgun Gothic', sans-serif;
 	font-size: 15px;
 	font-weight: 400;
 	color: #3c3837;
 }
 ul {
-	font-family: 'KoPub바탕','Malgun Gothic', serif;
+	font-family: 'KoPub바탕Bold','Malgun Gothic', serif;
 	font-size: 25px;
 	font-weight: bold;
 	color: #3c3837;
@@ -89,21 +89,38 @@ a:hover,a:active,a:focus{
 	text-align: center;
 }
 
-@media (min-width: 992px){
+/*@media (min-width: 992px){
 	.navbar-brand {
-		display: none;
+		display: inline;
 	}
-}
+}*/
+
+.leftAd {
+		display: inline;
+	}
 
 .navbar-brand-center-logo{
 	position: relative;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .logout-small-nav{
 	display: none;
+}
+
+hr {
+	border-top: 3px double #3c3837;
+	border-bottom: 3px double #3c3837;
+}
+
+ul {
+	text-align: center;
+}
+
+li .nav-item { 
+	padding: 0px 20px
 }
 
 /* 크롬이새끼야너는뭐가문젠데 왜 네가 되면 다른브라우저는 안되고 네가 안되면 다른브라우저는 다 되냐고 */
@@ -114,12 +131,13 @@ a:hover,a:active,a:focus{
 		.login-item{
 			position: absolute;
 			right: 10px;
-			top: 1%;
+			top: 20px;
 		}
 	}
 	#login-image{
 	content: url('./img/main/google_login.png');
-	height: 45px;
+	height: 110px;
+	text-align: center;
 	}
 	/*#login-image:hover{
 	animation-delay: 1s;
@@ -135,7 +153,12 @@ a:hover,a:active,a:focus{
 
 img#login-image{
 	content: url('./img/main/google_login.png');
+<<<<<<< HEAD
+	height: 110px;
+=======
 	height: 45px;
+	text-align: center;
+>>>>>>> origin/master
 }
 /*img#login-image:hover{
 	animation-delay: 1s;
@@ -161,7 +184,7 @@ img#login-image:active{
 
 	img#login-image{
 	content: url('./img/main/google_login.png');
-	height: 45px;
+	height: 110px;
 	}
 /*	img#login-image:hover{
 	animation-delay: 1s;

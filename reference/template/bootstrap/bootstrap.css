@@ -4593,7 +4593,7 @@ input[type="button"].btn-block {
   display: block;
 }
 
-.navbar {
+. {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4625,7 +4625,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-brand {
-  display: inline-block;
+  display: inline;
   padding-top: 0.3006875rem;
   padding-bottom: 0.3006875rem;
   margin-right: 1rem;
@@ -10788,7 +10788,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .navbar {
-  font-size: 0.930125rem;
+  font-size: 25pt;
 }
 
 .navbar.bg-dark {
@@ -10797,10 +10797,11 @@ a.text-dark:hover, a.text-dark:focus {
 
 .navbar.bg-light {
   background-color: #bfbfbf !important;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 3px double rgba(60, 56, 55, 1);
+  border-bottom: 3px double rgba(60, 56, 55, 1);
 }
 
-.navbar.bg-light.navbar-fixed-top {
+.navbar.bg-light.navbarboo-fixed-top {
   border-width: 0 0 1px 0;
 }
 
