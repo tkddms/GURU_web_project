@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
 
     'allauth.socialaccount.providers.google',
+
+    'markdownx',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +143,7 @@ LOGIN_REDIRECT_URL = '/blog/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'_media')
 MEDIA_URL = '/media/'
+
+from datetime import datetime
+
+MARKDOWNX_MEDIA_PATH = datetime.now().strftime('markdownx/%Y/%m/%d')

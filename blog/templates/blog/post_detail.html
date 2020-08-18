@@ -6,8 +6,5 @@
 {% endfor %}
 <h2>Post Detail Page</h2>
 <h3>{{ object.title }}</h3>
-<div class="container">{{ object.content }}</div>
-{% if object.author == user.username %}
-<a href="{{ object.get_update_url }}">UPDATE</a>
-{% endif %}
+<div class="container">{{ object.get_markdown_content | safe }}</div>
 {% endblock %}
