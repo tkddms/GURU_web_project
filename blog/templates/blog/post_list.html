@@ -1,7 +1,8 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<h1>Info Page</h1>
+<h2>실종 정보</h2>
+<hr>
 {% if object_list.exists %}
 {% for p in object_list %}
 <div class="card-info">
@@ -20,7 +21,7 @@
                     #{{ tag }}
                 {% endfor %}</p>
             <div class="card-footer text-muted">
-                Posted on {{p.created}} by {{p.author}}
+                Posted on {{p.created}} <br> by {{p.author}}
             </div>
         </div>
     </a>

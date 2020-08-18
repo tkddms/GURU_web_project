@@ -82,26 +82,34 @@ a:hover,a:active,a:focus{
 
 /* style */
 .wrap{
-	min-height: 80%;
+	min-height: 75%;
 	display: block;
 	margin: 0 auto;
 	padding-top: 2em;
 	text-align: center;
 }
 
-/*@media (min-width: 992px){
-	.navbar-brand {
-		display: inline;
-	}
-}*/
-
 .leftAd {
 		display: inline;
 	}
 
+.already-login, .login-btn{
+	display: inline-block;
+	position: absolute;
+	right: 15px;
+	top: 57px;
+}
+
+@media (min-width: 992px){
+    .logout-small-nav{
+	display:none;
+	visibility:hidden;
+	}
+}
+
 .navbar-brand-center-logo{
 	position: relative;
-	display: block;
+	display: inline-block;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -123,7 +131,6 @@ li .nav-item {
 	padding: 0px 20px
 }
 
-/* 크롬이새끼야너는뭐가문젠데 왜 네가 되면 다른브라우저는 안되고 네가 안되면 다른브라우저는 다 되냐고 */
 
 /* Chrome */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -134,38 +141,7 @@ li .nav-item {
 			top: 20px;
 		}
 	}
-	#login-image{
-	content: url('/GURU_web_project/blog/static/_assets/src/google_login.png');
-	height: 110px;
-	text-align: center;
-	}
-	/*#login-image:hover{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_focus_web@2x.png');
-	height: 45px;
-	}
-	#login-image:active{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
-	height: 45px;
-	}*/
 }
-
-img#login-image{
-	content: url('/GURU_web_project/blog/static/_assets/src/google_login.png');
-	height: 45px;
-	text-align: center;
-}
-/*img#login-image:hover{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_focus_web@2x.png');
-	height: 45px;
-}
-img#login-image:active{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
-	height: 45px;
-}*/
 
 @media (min-width: 992px){
 	.login-item{
@@ -173,25 +149,17 @@ img#login-image:active{
 	right: 10px;
 	top: 1%;
 	}
-
 	.logout-small-nav{
 		display: inline-block;
 	}
+}
 
-	img#login-image{
-	content: url('/GURU_web_project/blog/static/_assets/src/google_login.png');
-	height: 110px;
-	}
-/*	img#login-image:hover{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_focus_web@2x.png');
-	height: 45px;
-	}
-	img#login-image:active{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
-	height: 45px;
-	}*/
+#login-admin{
+	display: inline-block;
+	width: 190px;
+	height: 78px;
+	text-align: center;
+	padding-top: 15px;
 }
 
 footer {
