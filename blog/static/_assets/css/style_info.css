@@ -1,4 +1,4 @@
-.card {
+.card-info {
     display: inline-block;
     margin: 10px 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -7,20 +7,20 @@
     border-radius: 5px;
   }
   
-  .card:hover {
+  .card-info:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
   
-  .card img {
+  .card-info img {
     width: 100%;
     height: 100%;
     border-radius: 5px 5px 0 0;
   }
   
-  .card-content {
+  .card-info-content {
     padding: 5px 10px 15px 10px;
   }
 
-  .card > a{
+  .card-info > a{
     text-decoration: none;
   }

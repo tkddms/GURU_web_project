@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
 
     'markdownx',
+    'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -147,3 +149,5 @@ MEDIA_URL = '/media/'
 from datetime import datetime
 
 MARKDOWNX_MEDIA_PATH = datetime.now().strftime('markdownx/%Y/%m/%d')
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
