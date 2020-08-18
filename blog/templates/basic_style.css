@@ -1,15 +1,21 @@
 /* 배경화면색 & 글씨 기본설정 css */
+@charset "utf-8";
+
 body {background: #bfbfbf}
 @font-face {
-font-family:"KoPub돋움";
-src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/dotum") format("truetype");
+font-family:"KoPub돋움Bold";
+src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/dotum/KoPubWorld Dotum Bold.ttf") format("truetype");
+}
+@font-face {
+font-family:"KoPub돋움Normal";
+src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/dotum/KoPubWorld Dotum Medium.ttf") format("truetype");
 }
 @font-face {
 font-family:"KoPub바탕Bold";
 src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/batang/KoPubWorld Batang Bold.ttf") format("truetype");
 }
-@font-face {
-font-family:"DXMacaron";
+@font-face { 
+font-family:"DXMacaron";  
 src:url("GURU_web_project/reference/src/fonts/DXMacaron-KSCpc-EUC-H.ttf") format("truetype");
 }
 h1 {
