@@ -1,18 +1,27 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
+    {% block head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="./bootstrap/bootstrap.css" media="screen">
-    <link rel="stylesheet" href="./bootstrap/custom.min.css">
-    <link rel="stylesheet" href="./style_base.css">
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'bootstrap/custom.min.css' %}">
+    <link rel="stylesheet" href="{% static '_assets/css/style_base.css' %}">
+    <link rel="stylesheet" href="{% static '_assets/css/style_info.css' %}">
     <title>Base</title>
+    {% endblock %}
 </head>
 <body>
+    {% load socialaccount %}
     <img class="leftAd" src="./img/main/leftAd.png" alt="실종문의는 구루슈니즈 광고" width="322px" height="110px" align="left">
-    <a class="navbar-brand-center-logo" href="./_base.html"><img src="./img/main/logo.png" alt="구루슈니즈 탐정사무소 로고" width="386px" height="126px" class="logo-center"></a>
-    <a class="login-item nav-link" href="#"><img src="none" alt="Sign in with Google" id="login-image"></a>
+    <a class="navbar-brand-center-logo" href="{% url 'main' %}">
+        <img src="./img/main/logo.png" alt="구루슈니즈 탐정사무소 로고" width="386px" height="126px" class="logo-center">
+    </a>
+    <a class="login-item nav-link" href="#">
+        <img src="none" alt="Sign in with Google" id="login-image">
+    </a>
     <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="true" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button> -->
@@ -20,37 +29,39 @@
 
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        {% block nav %}
         <div class="navbar-collapse collapse show" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                <a class="nav-link" href="./_base.html">소개<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'main' %}">소개</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="./_info.html">실종정보</a>
+                <a class="nav-link" href="{% url 'info' %}">실종정보</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">업무문의</a>
+                <a class="nav-link" href="{% url 'service' %}">업무문의</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">연락처</a>
+                <a class="nav-link" href="{% url 'contact' %}">연락처</a>
                 </li>
             </ul>
         </div>
+        {% endblock %}
     </nav>
     <!-- //navbar -->
 
 <div class="wrap container">
     <div class="jumbotron">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur tempora cum iusto beatae vitae nostrum, dolore incidunt, temporibus in quia ut laudantium officiis suscipit reprehenderit? Repellat sint fuga quos quibusdam molestiae, deleniti assumenda laboriosam blanditiis, maiores corporis dolore similique nulla sit officiis harum error adipisci earum nam corrupti voluptas veniam. Libero asperiores laborum autem molestias optio natus quo dolore odit saepe ipsam, voluptatibus itaque fugiat et, iste veniam. Libero rerum iste ipsam quisquam. Consectetur, eius reprehenderit! Quia libero itaque maiores excepturi esse cum quasi nam saepe aliquam. Quasi incidunt, cumque laudantium expedita quaerat, earum architecto, totam suscipit itaque illo quis!
+        {% block content%}
+        {% endblock %}
     </div>
 </div>
 <footer>&COPY; 2020 HTML-7 all rights reserved</footer>
 
-    <script src="./bootstrap/jquery.min.js"></script>
-    <script src="./bootstrap/popper.min.js"></script>
-    <script src="./bootstrap/bootstrap.min.js"></script>
-    <script src="./bootstrap/custom.js"></script>
-    <script src="./js_base.js"></script>
+<script src="{% static 'bootstrap/jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap/popper.min.js' %}"></script>
+<script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
+<script src="{% static 'bootstrap/custom.js' %}"></script>
 
 </body>
 </html>

@@ -1,22 +1,27 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<h1>Info Page</h1>
+<h2>실종 정보</h2>
+<hr>
 {% if object_list.exists %}
 {% for p in object_list %}
-<div class="card">
+<div class="card-info">
     <a href="{{ p.get_absolute_url }}">
+        <div class="card-footer" id="post-card-{{p.pk}}"></div>
         {% if p.head_image %}
         <img class="card-img-top" src="{{p.head_image.url}}" alt="Card image cap" style="width:100%">
         {% else %}
         <img src="https://picsum.photos/700/600?random" alt="Card image cap" class="card-img-top">
         {% endif %}
-        <div class="card-content">
+        <div class="card-info-content">
             <h4><b>{{p.title}}</b></h4>
-            <p>{{p.content | truncatewords:50}}</p>
+            <p>{{p.content | truncatewords:10}}</p>
             <hr>
+            <p>{% for tag in p.tags.all %}
+                    #{{ tag }}
+                {% endfor %}</p>
             <div class="card-footer text-muted">
-                Posted on {{p.created}} by {{p.author}}
+                Posted on {{p.created}} <br> by {{p.author}}
             </div>
         </div>
     </a>

@@ -2,13 +2,67 @@
 
 /* reset */
 html,body {
-	height: 100%; width: 100%;
+	height: 100%; width: 100%; background: #bfbfbf; text-align: center;
 }
+/*폰트 등록*/
+@font-face {
+font-family:"KoPub돋움Bold";
+src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/dotum/KoPubWorld Dotum Bold.ttf") format("truetype");
+}
+@font-face {
+font-family:"KoPub돋움Normal";
+src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/dotum/KoPubWorld Dotum Medium.ttf") format("truetype");
+}
+@font-face {
+font-family:"KoPub바탕Bold";
+src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/batang/KoPubWorld Batang Bold.ttf") format("truetype");
+}
+@font-face { 
+font-family:"DXMacaron";  
+src:url("GURU_web_project/reference/src/fonts/DXMacaron-KSCpc-EUC-H.ttf") format("truetype");
+}
+
 body,p,h1,h2,h3,select,td,tr,table{
 	padding: 0;
 	margin: 0;
 	font-family: 'Malgun Gothic', sans-serif;
 	font-size: 12px;
+	color: #3c3837;
+}
+h1 {
+	font-family: 'DXMacaron';
+	font-size: 40px;
+	color: #3c3837;
+}
+h2 {
+	font-family: 'KoPub바탕Bold';
+	font-size: 30px;
+	font-weight: bold;
+	color: #3c3837;
+}
+h3 {
+	font-family: 'KoPub돋움Bold','Malgun Gothic', sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	color: #3c3837;
+}
+h4 {
+	font-family: 'KoPub돋움Bold','Malgun Gothic', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #3c3837;
+}
+p {
+	font-family: 'KoPub돋움Normal','Malgun Gothic', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: #3c3837;
+}
+ul {
+	font-family: 'KoPub바탕Bold','Malgun Gothic', serif;
+	font-size: 25px;
+	font-weight: bold;
+	color: #3c3837;
 }
 img, fieldset{
 	border: 0;
@@ -28,15 +82,22 @@ a:hover,a:active,a:focus{
 
 /* style */
 .wrap{
-	min-height: 80%;
+	min-height: 75%;
 	display: block;
 	margin: 0 auto;
 	padding-top: 2em;
 	text-align: center;
 }
 
-.already-login{
-display:none;
+.leftAd {
+		display: inline;
+	}
+
+.already-login, .login-btn{
+	display: inline-block;
+	position: absolute;
+	right: 15px;
+	top: 57px;
 }
 
 @media (min-width: 992px){
@@ -46,33 +107,30 @@ display:none;
 	}
 }
 
-@media (min-width: 992px){
-	.navbar-brand {
-		display: none;
-	}
-	.already-login{
-		display: inline-block;
-		top: 1%;
-		right: 5px;
-	}
-	.login-item{
-		position: absolute;
-		right: 10px;
-		top: 1%;
-	}
-	.logout-small-nav{
-	display:block;
-	}
-}
-
 .navbar-brand-center-logo{
 	position: relative;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	display: inline-block;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
-/* 크롬이새끼야너는뭐가문젠데 왜 네가 되면 다른브라우저는 안되고 네가 안되면 다른브라우저는 다 되냐고 */
+.logout-small-nav{
+	display: none;
+}
+
+hr {
+	border-top: 3px double #3c3837;
+	border-bottom: 3px double #3c3837;
+}
+
+ul {
+	text-align: center;
+}
+
+li .nav-item { 
+	padding: 0px 20px
+}
+
 
 /* Chrome */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -80,25 +138,8 @@ display:none;
 		.login-item{
 			position: absolute;
 			right: 10px;
-			top: 1%;
+			top: 20px;
 		}
-		.logout-small-nav{
-	        display:block;
-	    }
-	}
-	#login-image{
-	content: url('./img/btn_google_signin_light_normal_web@2x.png');
-	height: 45px;
-	}
-	#login-image:hover{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_focus_web@2x.png');
-	height: 45px;
-	}
-	#login-image:active{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
-	height: 45px;
 	}
 }
 
@@ -108,23 +149,17 @@ display:none;
 	right: 10px;
 	top: 1%;
 	}
-    .logout-small-nav{
-	display:block;
+	.logout-small-nav{
+		display: inline-block;
 	}
-	img#login-image{
-	content: url('./img/btn_google_signin_light_normal_web@2x.png');
-	height: 45px;
-	}
-	img#login-image:hover{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_focus_web@2x.png');
-	height: 45px;
-	}
-	img#login-image:active{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
-	height: 45px;
-	}
+}
+
+#login-admin{
+	display: inline-block;
+	width: 190px;
+	height: 78px;
+	text-align: center;
+	padding-top: 15px;
 }
 
 footer {
