@@ -10,6 +10,9 @@
         <div class="card-footer" id="post-card-{{p.pk}}"></div>
         {% if p.head_image %}
         <img class="card-img-top" src="{{p.head_image.url}}" alt="Card image cap" style="width:100%">
+        {% else %}
+        <img class="card-img-top" src="{% static '_assets/src/missing_empty.jpg' %}" alt="Card image cap" style="width:100%">
+
         {% endif %}
         <div class="card-info-content">
             <h4><b>{{p.title}}</b></h4>

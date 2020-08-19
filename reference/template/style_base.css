@@ -123,8 +123,6 @@ li .nav-item {
 	padding: 0px 20px
 }
 
-/* 크롬이새끼야너는뭐가문젠데 왜 네가 되면 다른브라우저는 안되고 네가 안되면 다른브라우저는 다 되냐고 */
-
 /* Chrome */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 	@media (min-width: 992px){
@@ -139,16 +137,6 @@ li .nav-item {
 	height: 110px;
 	text-align: center;
 	}
-	/*#login-image:hover{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_focus_web@2x.png');
-	height: 45px;
-	}
-	#login-image:active{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
-	height: 45px;
-	}*/
 }
 
 img#login-image{
@@ -156,16 +144,6 @@ img#login-image{
 	height: 45px;
 	text-align: center;
 }
-/*img#login-image:hover{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_focus_web@2x.png');
-	height: 45px;
-}
-img#login-image:active{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
-	height: 45px;
-}*/
 
 @media (min-width: 992px){
 	.login-item{
@@ -182,16 +160,6 @@ img#login-image:active{
 	content: url('./img/main/google_login.png');
 	height: 110px;
 	}
-/*	img#login-image:hover{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_focus_web@2x.png');
-	height: 45px;
-	}
-	img#login-image:active{
-	animation-delay: 1s;
-	content: url('./img/btn_google_signin_light_pressed_web@2x.png');
-	height: 45px;
-	}*/
 }
 
 footer {

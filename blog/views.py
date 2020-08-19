@@ -2,9 +2,9 @@ from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from django.shortcuts import render, redirect
 from .models import Post, Comment
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import ListView, DetailView, UpdateView
 from .forms import CommentForm, PostForm
+from django.contrib.auth.decorators import login_required
 
 
 def main(request):
@@ -49,7 +49,8 @@ def createPost(request):
             return redirect('/info/')
     else:
         form = PostForm()
-        return render(request, 'blog\post_form.html', {'form':form})
+    
+    return render(request, 'blog/post_form.html', {'form':form } )
 
 def new_comment(request, pk):
     post = Post.objects.get(pk=pk)

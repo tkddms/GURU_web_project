@@ -5598,11 +5598,11 @@ a.badge-dark:focus, a.badge-dark.focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
 }
-
+ 
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  background-color: #e9ecef;
+  background-color: #bfbfbf;
   border-radius: 0.3rem;
 }
 

@@ -11,7 +11,7 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = [
-            'title', 'head_image', 'missing_place', 'missing_date', 'missing_age','content', 'tags'
+            'title', 'head_image', 'missing_place', 'missing_date', 'missing_age','content', 'tags',
         ]
         widgets = {
             'title' : forms.TextInput(

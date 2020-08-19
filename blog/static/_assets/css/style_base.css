@@ -81,17 +81,12 @@ a:hover,a:active,a:focus{
 }
 
 /* style */
-.wrap{
-	min-height: 75%;
-	display: block;
-	margin: 0 auto;
-	padding-top: 2em;
-	text-align: center;
-}
 
-.leftAd {
-		display: inline;
-	}
+.leftAd{
+	position: absolute;
+	left: 15px;
+	top: 27px;
+}
 
 .already-login, .login-btn{
 	display: inline-block;
@@ -104,6 +99,12 @@ a:hover,a:active,a:focus{
     .logout-small-nav{
 	display:none;
 	visibility:hidden;
+	}
+}
+
+@media (max-width: 992px){
+	.leftAd{
+		display: none ;
 	}
 }
 
