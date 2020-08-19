@@ -74,16 +74,16 @@
         {% block nav %}
         <div class="navbar-collapse collapse show" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item" id="main">
                 <a class="nav-link" href="{% url 'main' %}">소개</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="info">
                 <a class="nav-link" href="{% url 'info' %}">실종정보</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="service">
                 <a class="nav-link" href="{% url 'service' %}">업무문의</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="contact">
                 <a class="nav-link" href="{% url 'contact' %}">연락처</a>
                 </li>
                 <li class="nav-item logout-small-nav">
@@ -91,6 +91,8 @@
                 </li>
             </ul>
         </div>
+        <!-- url 받기 -->
+        <div id="_url" style="display: none;">{{ request.path }}</div>
         {% endblock %}
     </nav>
     <!-- //navbar -->
