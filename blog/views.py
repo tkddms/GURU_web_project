@@ -1,8 +1,11 @@
+from django.contrib.auth.decorators import login_required
+from django.utils import timezone
 from django.shortcuts import render, redirect
 from .models import Post, Comment
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
+
 
 def main(request):
     return render(request, 'blog/post_main.html')
@@ -34,19 +37,19 @@ class PostUpdate(UpdateView):
         'title', 'head_image', 'missing_place', 'missing_date', 'missing_age', 'recent_age' ,'content', 'tags'
     ]
 
-class PostCreate(LoginRequiredMixin, CreateView):
-    model = Post
-    fields = [
-        'title', 'head_image', 'missing_place', 'missing_date', 'missing_age', 'recent_age' ,'content', 'tags'
-    ]
-
-    def form_valid(self, form):
-        current_user = self.request.user
-        if current_user.is_authenticated:
-            form.instance.author = current_user
-            return super(type(self), self).form_valid(form)
-        else:
-            return redirect('/blog/')
+@login_required
+def createPost(request):
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.created = timezone.now()
+            post.save()
+            return redirect('/info/')
+    else:
+        form = PostForm()
+        return render(request, 'blog\post_form.html', {'form':form})
 
 def new_comment(request, pk):
     post = Post.objects.get(pk=pk)

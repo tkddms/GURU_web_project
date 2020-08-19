@@ -3,12 +3,23 @@
 {% block title %}{{ object.title }} - LostChild{% endblock %}
 
 {% block content %}
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    <table>
-        {{form.as_table}}
-    </table>
-    <button type="submit">SUBMIT</button>
-</form>
+
+<div class="mx-auto">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group{% if field.errors %} has-error{% endif %} row col-sm-7 mx-auto">
+            {{ field.label_tag }}
+            {{ field }}
+            {% if field.errors %}
+            {% for error in field.errors %}
+            <span class="help-block">{{ error }}</span>
+            {% endfor %}
+            {% endif %}
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">SUBMIT</button>
+    </form>
+</div>
 {{ form.media }}
 {% endblock %}

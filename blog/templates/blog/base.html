@@ -6,11 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="{% static '_assets/src/favicon.jpg' %}">
     <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.css' %}" media="screen">
     <link rel="stylesheet" href="{% static 'bootstrap/custom.min.css' %}">
     <link rel="stylesheet" href="{% static '_assets/css/style_base.css' %}">
     <link rel="stylesheet" href="{% static '_assets/css/style_info.css' %}">
+    <link rel="stylesheet" href="{% static '_assets/css/basic_style.css' %}">
     <title>Base</title>
+    <style>
+        #text { display:none; }
+    </style>
     {% endblock %}
 </head>
 <body>
@@ -102,6 +107,6 @@
 <script src="{% static 'bootstrap/popper.min.js' %}"></script>
 <script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
 <script src="{% static 'bootstrap/custom.js' %}"></script>
-
+<script src="{% static '_assets/js/base.js' %}"></script>
 </body>
 </html>

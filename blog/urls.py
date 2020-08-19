@@ -12,5 +12,5 @@ urlpatterns = [
     path('<int:pk>/update/', views.PostUpdate.as_view()),
     url(r'^service/$', views.service, name='service'),
     url(r'^contact/$', views.contact, name='contact'),
-    url('create/', views.PostCreate.as_view(), name='create'),
+    url(r'^create/$', views.createPost, name='create'),
 ]

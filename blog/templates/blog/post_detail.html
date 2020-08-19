@@ -28,6 +28,7 @@
 
     <div id="comment-list">
         <!-- Single Comment -->
+        <!-- 이름 / 실종장소 / 실종날짜 / 실종 당시 나이 / 현재 나이 / 이미지 / 세부사항(기타내용) / 태그 -->
         {% for comment in object.comment_set.all %}
         <div class="media mb-4" id="comment-id-{{ comment.pk }}">
             <div class="media-body">

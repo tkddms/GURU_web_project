@@ -13,13 +13,13 @@ class Tag(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=30)
-    content = MarkdownxField()
-    head_image = models.ImageField(upload_to='blog/%Y/%m/%d/', blank=True)
+    content = models.TextField(max_length=300,blank=True)
+    head_image = models.ImageField(upload_to='blog/%Y/%m/%d/', blank=True , default='blog/missing_img/missing_empty.jpg')
 
     created = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     missing_place = models.CharField(max_length=50, blank=True)
-    missing_date = models.DateTimeField(default=timezone.now, null=True, blank=True)
+    missing_date = models.CharField(max_length=20, null=True, blank=True)
     missing_age = models.IntegerField(null=True, blank=True)
     recent_age = models.IntegerField(null=True, blank=True)
 

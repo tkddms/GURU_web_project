@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %}
-
+{% load static %}
 {% block content %}
-<h2>실종 정보</h2>
+<h1>실종 정보</h1>
 <hr>
 {% if object_list.exists %}
 {% for p in object_list %}
@@ -10,12 +10,11 @@
         <div class="card-footer" id="post-card-{{p.pk}}"></div>
         {% if p.head_image %}
         <img class="card-img-top" src="{{p.head_image.url}}" alt="Card image cap" style="width:100%">
-        {% else %}
-        <img src="https://picsum.photos/700/600?random" alt="Card image cap" class="card-img-top">
         {% endif %}
         <div class="card-info-content">
             <h4><b>{{p.title}}</b></h4>
-            <p>{{p.content | truncatewords:10}}</p>
+            <p>실종 장소 : {{ p.missing_place }}</p>
+            <p>실종 나이 : {{ p.missing_age }}살</p>
             <hr>
             <p>{% for tag in p.tags.all %}
                     #{{ tag }}
