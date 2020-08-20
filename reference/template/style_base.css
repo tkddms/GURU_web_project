@@ -22,7 +22,7 @@ font-family:"DXMacaron";
 src:url("GURU_web_project/reference/src/fonts/DXMacaron-KSCpc-EUC-H.ttf") format("truetype");
 }
 
-body,p,h1,h2,h3,select,td,tr,table{
+body,p,h1,h2,h3,h4,select,td,tr,table{
 	padding: 0;
 	margin: 0;
 	font-family: 'Malgun Gothic', sans-serif;
@@ -44,6 +44,7 @@ h3 {
 	font-family: 'KoPub돋움Bold','Malgun Gothic', sans-serif;
 	font-size: 25px;
 	font-weight: bold;
+	line-height: 5em;
 	color: #3c3837;
 }
 h4 {
@@ -121,6 +122,29 @@ ul {
 
 li .nav-item { 
 	padding: 0px 20px
+}
+
+/*로고 마진값 조정해서 중앙정렬한 것 문제 생기면 그때 다시 수정하면 됩니다*/
+.logo-center {
+	margin-right: 330px;
+}
+
+/* nav-bar margin-top 간격 조정 */
+.navbar {
+	margin-top: 30px;
+}
+
+/* 탐정 이미지 class 설정 */
+.detective {
+	width: 400px;
+	float: left;
+	margin-right: 20px;
+}
+
+/* 소개글 왼쪽정렬 */
+.introduce {
+	line-height: 3em;
+	text-align: left;
 }
 
 /* 크롬이새끼야너는뭐가문젠데 왜 네가 되면 다른브라우저는 안되고 네가 안되면 다른브라우저는 다 되냐고 */
