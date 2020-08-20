@@ -32,7 +32,7 @@ class PostDetail(DetailView):
 class PostCreate(CreateView):
     model = Post
     fields = [
-        'title', 'head_image', 'missing_place', 'missing_date', 'missing_age', 'content',
+        'title', 'sex', 'head_image', 'missing_place', 'missing_date', 'missing_age', 'content',
     ]
 
 

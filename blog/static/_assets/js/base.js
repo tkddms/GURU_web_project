@@ -26,5 +26,14 @@ function CalRecentAge(){
     $('#recent_age').text((missingAge+diffYear)+"살")
 }
 
+function AddSex(){
+    if($('#sex_inp_div').html()=='1'){
+        $('#sex_inp').text("여")
+    }else{
+        $('#sex_inp').text("남")
+    }
+}
+
 ChangeActive()
 CalRecentAge()
+AddSex()

@@ -9,9 +9,9 @@
     <link rel="shortcut icon" href="{% static '_assets/src/favicon.jpg' %}">
     <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.css' %}" media="screen">
     <link rel="stylesheet" href="{% static 'bootstrap/custom.min.css' %}">
+    <link rel="stylesheet" href="{% static '_assets/css/basic_style.css' %}">
     <link rel="stylesheet" href="{% static '_assets/css/style_base.css' %}">
     <link rel="stylesheet" href="{% static '_assets/css/style_info.css' %}">
-    <link rel="stylesheet" href="{% static '_assets/css/basic_style.css' %}">
     <link rel="stylesheet" href="{% static '_assets/css/detail_style.css' %}">
     <title>Base</title>
     <style>
@@ -73,23 +73,19 @@
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         {% block nav %}
-        <div class="navbar-collapse collapse show" id="navbarColor01">
+        <div class="navbar-collapse collapse show mx-auto" id="navbarColor01">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item" id="main">
-                <a class="nav-link" href="{% url 'main' %}">소개</a>
+                <a class="nav-link mx-5" href="{% url 'main' %}">소개</a>
                 </li>
                 <li class="nav-item" id="info">
-                <a class="nav-link" href="{% url 'info' %}">실종정보</a>
+                <a class="nav-link mx-5" href="{% url 'info' %}">실종정보</a>
                 </li>
                 <li class="nav-item" id="service">
-                <a class="nav-link" href="{% url 'service' %}">업무문의</a>
+                <a class="nav-link mx-5" href="{% url 'service' %}">업무문의</a>
                 </li>
                 <li class="nav-item" id="contact">
-                <a class="nav-link" href="{% url 'contact' %}">연락처</a>
-                </li>
-                <li class="nav-item logout-small-nav">
-                    <a class="nav-link logout-small-nav" href="{% url 'account_logout' %}">Log out</a>
-                </li>
+                <a class="nav-link mx-5" href="{% url 'contact' %}">연락처</a>
             </ul>
         </div>
         <!-- url 받기 -->

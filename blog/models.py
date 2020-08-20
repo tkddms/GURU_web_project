@@ -9,6 +9,15 @@ class Post(models.Model):
     content = models.TextField(max_length=300, blank=True)
     head_image = models.ImageField(upload_to='blog/%Y/%m/%d/', default='/missing_img/missing_empty.jpg')
 
+    SEX_CHOICES = (
+        (1, "여성"),
+        (2, "남성"),
+    )
+    sex = models.IntegerField(
+        choices= SEX_CHOICES,
+        default=1,
+    )
+
     created = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     missing_place = models.CharField(max_length=50)

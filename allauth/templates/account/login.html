@@ -1,0 +1,32 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block content %}
+<div class="container wrap jumbotron">
+<form class="login " method="POST" action="{% url 'account_login' %}">
+  {% csrf_token %}
+  <div class="form-group row col-sm-8 mx-auto">
+    <label for="id_login">Username</label>
+    <input type="text" class="form-control" name="login" required_id="id_login" autofocus maxlength="150" placeholder="Username">
+  </div>
+  <div class="form-group row col-sm-8 mx-auto">
+    <label for="id_password">Password</label>
+    <input type="password" class="form-control" name="password" required_id="id_password" placeholder="Password">
+  </div>
+  <div class="form-group row col-sm-8 mx-auto">
+    <label for="id_remember">Remember Me</label>
+    <input type="checkbox" class="form-control" name="remember" required_id="id_remember" placeholder="Password">
+  </div>
+</div>
+  <!-- {{ form.as_p }} -->
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+  <button class="primaryAction btn btn-secondary" type="submit">{% trans "Sign In" %}</button>
+</form>
+
+{% endblock %}

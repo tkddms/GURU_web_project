@@ -10,13 +10,14 @@
         <!-- Post Content Column -->
         <div class="col-lg-8 mx-auto">
             <!-- Title -->
-            <h1 class="mt-4">{{ object.title }}</h1>
+            <h1 class="mt-4">{{ object.title }} (<span id="sex_inp"></span>) </h1>
+            <div id="sex_inp_div" style="display:none;">{{ object.sex }}</div>
             <hr>
             <!-- Preview Image -->
             {% if object.head_image %}
-            <img src="{{ object.head_image.url }}" alt="{{ objcet.head_image }}">
+            <img src="{{ object.head_image.url }}" alt="{{ objcet.head_image }}" class="detail-image">
             {% else %}
-            <img src="{% static '_assets/src/missing_empty.jpg' %}" alt="PlaceHolder">
+            <img src="{% static '_assets/src/missing_empty.jpg' %}" alt="PlaceHolder" class="detail-image">
             {% endif %}
             <hr>
             <h4 class="character">실종장소</h4>

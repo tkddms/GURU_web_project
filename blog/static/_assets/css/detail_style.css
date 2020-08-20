@@ -18,3 +18,7 @@
 .comment-wrap{
 	position: relative;
 }
+
+.detail-image{
+	height: 400px;
+}

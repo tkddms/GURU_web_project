@@ -1,85 +1,4 @@
-@charset "utf-8";
 
-/* reset */
-html,body {
-	height: 100%; width: 100%; background: #bfbfbf; text-align: center;
-}
-/*폰트 등록*/
-@font-face {
-font-family:"KoPub돋움Bold";
-src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/dotum/KoPubWorld Dotum Bold.ttf") format("truetype");
-}
-@font-face {
-font-family:"KoPub돋움Normal";
-src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/dotum/KoPubWorld Dotum Medium.ttf") format("truetype");
-}
-@font-face {
-font-family:"KoPub바탕Bold";
-src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/batang/KoPubWorld Batang Bold.ttf") format("truetype");
-}
-@font-face { 
-font-family:"DXMacaron";  
-src:url("GURU_web_project/reference/src/fonts/DXMacaron-KSCpc-EUC-H.ttf") format("truetype");
-}
-
-body,p,h1,h2,h3,h4,select,td,tr,table{
-	padding: 0;
-	margin: 0;
-	font-family: 'Malgun Gothic', sans-serif;
-	font-size: 12px;
-	color: #3c3837;
-}
-h1 {
-	font-family: 'DXMacaron';
-	font-size: 40px;
-	color: #3c3837;
-}
-h2 {
-	font-family: 'KoPub바탕Bold';
-	font-size: 30px;
-	font-weight: bold;
-	color: #3c3837;
-}
-h3 {
-	font-family: 'KoPub돋움Bold','Malgun Gothic', sans-serif;
-	font-size: 25px;
-	font-weight: bold;
-	line-height: 5em;
-	color: #3c3837;
-}
-h4 {
-	font-family: 'KoPub돋움Bold','Malgun Gothic', sans-serif;
-	font-size: 20px;
-	font-weight: bold;
-	color: #3c3837;
-}
-p {
-	font-family: 'KoPub돋움Normal','Malgun Gothic', sans-serif;
-	font-size: 15px;
-	font-weight: 400;
-	color: #3c3837;
-}
-ul {
-	font-family: 'KoPub바탕Bold','Malgun Gothic', serif;
-	font-size: 25px;
-	font-weight: bold;
-	color: #3c3837;
-}
-img, fieldset{
-	border: 0;
-}
-ul,ol{
-	list-style: none;
-}
-em,address{
-	font-style: normal;
-}
-a{
-	text-decoration: none;
-}
-a:hover,a:active,a:focus{
-	text-decoration: underline;
-}
 
 /* style */
 .wrap{
@@ -89,12 +8,6 @@ a:hover,a:active,a:focus{
 	padding-top: 2em;
 	text-align: center;
 }
-
-/*@media (min-width: 992px){
-	.navbar-brand {
-		display: inline;
-	}
-}*/
 
 .leftAd {
 		display: inline;

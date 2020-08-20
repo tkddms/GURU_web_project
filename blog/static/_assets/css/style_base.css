@@ -1,85 +1,3 @@
-@charset "utf-8";
-
-/* reset */
-html,body {
-	height: 100%; width: 100%; background: #bfbfbf; text-align: center;
-}
-/*폰트 등록*/
-@font-face {
-font-family:"KoPub돋움Bold";
-src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/dotum/KoPubWorld Dotum Bold.ttf") format("truetype");
-}
-@font-face {
-font-family:"KoPub돋움Normal";
-src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/dotum/KoPubWorld Dotum Medium.ttf") format("truetype");
-}
-@font-face {
-font-family:"KoPub바탕Bold";
-src:url("GURU_web_project/reference/src/fonts/KOPUBWORLD_TTF_FONTS/batang/KoPubWorld Batang Bold.ttf") format("truetype");
-}
-@font-face { 
-font-family:"DXMacaron";  
-src:url("GURU_web_project/reference/src/fonts/DXMacaron-KSCpc-EUC-H.ttf") format("truetype");
-}
-
-body,p,h1,h2,h3,select,td,tr,table{
-	padding: 0;
-	margin: 0;
-	font-family: 'Malgun Gothic', sans-serif;
-	font-size: 12px;
-	color: #3c3837;
-}
-h1 {
-	font-family: 'DXMacaron';
-	font-size: 40px;
-	color: #3c3837;
-}
-h2 {
-	font-family: 'KoPub바탕Bold';
-	font-size: 30px;
-	font-weight: bold;
-	color: #3c3837;
-}
-h3 {
-	font-family: 'KoPub돋움Bold','Malgun Gothic', sans-serif;
-	font-size: 25px;
-	font-weight: bold;
-	color: #3c3837;
-}
-h4 {
-	font-family: 'KoPub돋움Bold','Malgun Gothic', sans-serif;
-	font-size: 20px;
-	font-weight: bold;
-	color: #3c3837;
-}
-p {
-	font-family: 'KoPub돋움Normal','Malgun Gothic', sans-serif;
-	font-size: 15px;
-	font-weight: 400;
-	color: #3c3837;
-}
-ul {
-	font-family: 'KoPub바탕Bold','Malgun Gothic', serif;
-	font-size: 25px;
-	font-weight: bold;
-	color: #3c3837;
-}
-img, fieldset{
-	border: 0;
-}
-ul,ol{
-	list-style: none;
-}
-em,address{
-	font-style: normal;
-}
-a{
-	text-decoration: none;
-}
-a:hover,a:active,a:focus{
-	text-decoration: underline;
-}
-
 /* style */
 
 .leftAd{
@@ -129,7 +47,44 @@ ul {
 }
 
 li .nav-item { 
-	padding: 0px 20px
+	padding: 0px 20px;
+}
+
+.nav-link{
+	padding: 30px;
+}
+
+/*로고 마진값 조정해서 중앙정렬한 것 문제 생기면 그때 다시 수정하면 됩니다*/
+.logo-center {
+	margin-right: 330px;
+}
+
+/* nav-bar margin-top 간격 조정 */
+.navbar {
+	margin-top: 30px;
+}
+
+/* 탐정 이미지 class 설정 */
+.detective {
+	display: block;
+	width: 400px;
+	float: left;
+	margin-right: 20px;
+}
+
+/* 소개글 왼쪽정렬 */
+.introduce {
+	line-height: 1.5em;
+	display: inline-block;
+	text-align: left;
+}
+
+.contact > tr,th,td{
+	font-size: 1.3em;
+}
+
+#header{
+	text-align: left;
 }
 
 

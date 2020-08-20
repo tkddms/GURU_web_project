@@ -1,10 +1,38 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<h1>연락처</h1>
+<table class="table contact">
+	<caption>Contact Us</caption>
+	<thead>
+		<tr> <!-- 표 위 이름 -->
+			<th>	</th>
+			<th>석민솔</th>
+			<th>이서우</th>
+			<th>이주현</th>
+			<th>원소희</th>
+			<th>한상은</th>
+		</tr> <!-- 이름 끝 --> 
+	</thead>
+	<tbody>
+		<tr> <!-- 표 왼쪽 전화번호 --> 
+			<th scope="row">전화번호</th>
+			<td>010-1234-5678</td>
+			<td>010-2345-6789</td>
+			<td>010-3456-7890</td>
+			<td>010-4567-8901</td>
+			<td>010-5678-9012</td>
+		</tr> <!-- 전화번호 끝 --> 
+		<tr> <!-- 표 왼쪽 이메일 --> 
+			<th scope="row">이메일</th>
+			<td>122@daum.net</td>
+			<td>123@daum.net</td>
+			<td>124@daum.net</td>
+			<td>125@daum.net</td>
+			<td>126@daum.net</td>
+		</tr> <!-- 이메일 끝 --> 
+	</tbody> 
 
-<div>
-This is a Contact page
-</div>
+</table>
+
 
 {% endblock %}
