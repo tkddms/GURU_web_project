@@ -9,8 +9,7 @@ urlpatterns = [
     path('<int:pk>/new_comment/', views.new_comment),
     path('delete_comment/<int:pk>/', views.delete_comment),
     path('edit_comment/<int:pk>/', views.CommentUpdate.as_view()),
-    path('<int:pk>/update/', views.PostUpdate.as_view()),
     url(r'^service/$', views.service, name='service'),
     url(r'^contact/$', views.contact, name='contact'),
-    url(r'^create/$', views.createPost, name='create'),
+    url('create/', views.PostCreate.as_view()),
 ]

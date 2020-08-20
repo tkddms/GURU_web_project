@@ -1,6 +1,7 @@
 // change active btn(word)
+var url = $('#_url').html()
+
 function ChangeActive(){
-    var url = $('#_url').html()
     $('#info','#service','#contact','#main').attr('class','nav-item');
     switch(url){
         case '/info/': $('#info').attr('class','nav-item active'); break;
@@ -12,14 +13,17 @@ function ChangeActive(){
 
 // calculate recent age
 function CalRecentAge(){
-    var missingAge = $('#missing_age').html().substring(0,1) //실종 나이
-    var missingYear = $('#missing_date').html().substring(0,4) //실종 날짜
+    var _missingAge = $('#missing_age').html().split("살") //실종 나이
+    var missingAge = parseInt(_missingAge[0])
+    var _missingYear = $('#missing_date').html().split(' ') //실종 날짜
+    var missingYear = _missingYear[2]
     var thisDate = new Date()
     var thisYear = thisDate.getFullYear()
-
     var diffYear = parseInt(thisYear) - parseInt(missingYear)
-    
-    $('#recent_age').text((parseInt(missingAge)+diffYear)+"살")
+
+    console.log(missingYear)
+
+    $('#recent_age').text((missingAge+diffYear)+"살")
 }
 
 ChangeActive()

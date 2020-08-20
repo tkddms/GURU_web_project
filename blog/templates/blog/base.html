@@ -32,7 +32,7 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" >{{ user }}님<br>안녕하세요</a>
             <div class="dropdown-menu dropdown-menu-right">
                 {% if request.user.username == "GURU" %}
-                <a class="dropdown-item" href="{% url 'create' %}">Edit</a>
+                <a class="dropdown-item" href="location.href='/blog/create/">Edit</a>
                 {% endif %}
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a>

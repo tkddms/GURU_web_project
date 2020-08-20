@@ -13,7 +13,7 @@
             <h1 class="mt-4">{{ object.title }}</h1>
             <hr>
             <!-- Preview Image -->
-            {% if p.head_image %}
+            {% if object.head_image %}
             <img src="{{ object.head_image.url }}" alt="{{ objcet.head_image }}">
             {% else %}
             <img src="{% static '_assets/src/missing_empty.jpg' %}" alt="PlaceHolder">

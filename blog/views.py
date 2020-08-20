@@ -1,10 +1,8 @@
-from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from django.shortcuts import render, redirect
 from .models import Post, Comment
-from django.views.generic import ListView, DetailView, UpdateView
+from django.views.generic import ListView, DetailView, UpdateView, CreateView
 from .forms import CommentForm, PostForm
-from django.contrib.auth.decorators import login_required
 
 
 def main(request):
@@ -31,26 +29,12 @@ class PostDetail(DetailView):
 
         return context
 
-class PostUpdate(UpdateView):
+class PostCreate(CreateView):
     model = Post
     fields = [
-        'title', 'head_image', 'missing_place', 'missing_date', 'missing_age', 'recent_age' ,'content', 'tags'
+        'title', 'head_image', 'missing_place', 'missing_date', 'missing_age', 'content',
     ]
 
-@login_required
-def createPost(request):
-    if request.method == "POST":
-        form = PostForm(request.POST)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            post.created = timezone.now()
-            post.save()
-            return redirect('/info/')
-    else:
-        form = PostForm()
-    
-    return render(request, 'blog/post_form.html', {'form':form } )
 
 def new_comment(request, pk):
     post = Post.objects.get(pk=pk)

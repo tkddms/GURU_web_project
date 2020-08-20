@@ -1,9 +1,5 @@
 from django.contrib import admin
-from .models import Post, Tag, Comment
-
-class TagAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug':('name',)}
+from .models import Post, Comment
 
 admin.site.register(Post)
 admin.site.register(Comment)
-admin.site.register(Tag,TagAdmin)
